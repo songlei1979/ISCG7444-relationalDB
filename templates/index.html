@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Student Grades System{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Student Grades Management System</h1>
+            <p class="lead">Manage students, courses, and grades with ease.</p>
+            <hr class="my-4">
+            <p>Choose an action below to get started:</p>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <h5 class="card-title">Students</h5>
+                <p class="card-text">View and manage student information.</p>
+                <a href="{{ url_for('students') }}" class="btn btn-primary">View Students</a>
+                <a href="{{ url_for('add_student') }}" class="btn btn-outline-primary ms-2">Add Student</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <h5 class="card-title">Courses</h5>
+                <p class="card-text">View and manage course information.</p>
+                <a href="{{ url_for('courses') }}" class="btn btn-primary">View Courses</a>
+                <a href="{{ url_for('add_course') }}" class="btn btn-outline-primary ms-2">Add Course</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <h5 class="card-title">Grades</h5>
+                <p class="card-text">View and manage student grades.</p>
+                <a href="{{ url_for('grades') }}" class="btn btn-primary">View Grades</a>
+                <a href="{{ url_for('add_grade') }}" class="btn btn-outline-primary ms-2">Add Grade</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
