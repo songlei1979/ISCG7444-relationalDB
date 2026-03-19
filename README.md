@@ -51,9 +51,9 @@ The application uses three main tables:
 ## Configuration
 
 Database connection settings are configured in `app.py`:
-- Host: 192.168.31.228
-- Username: lei
-- Password: Unitec123
+- Host: host_ip
+- Username: username
+- Password: password
 - Database: student_grades
 
 ## Usage
