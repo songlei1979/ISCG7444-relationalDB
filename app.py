@@ -3,10 +3,11 @@ import mysql.connector
 from mysql.connector import Error
 import os
 import sys
+from flask_cors import CORS
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key_here'
-
+CORS(app)
 # Database configuration
 # Support both Docker environment variables and local development
 DB_CONFIG = {
@@ -388,4 +389,4 @@ if __name__ == '__main__':
     else:
         print("Warning: Database initialization failed. Some features may not work properly.")
     
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5001, host='0.0.0.0')
